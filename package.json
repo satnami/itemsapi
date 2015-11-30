@@ -31,6 +31,7 @@
     "cors": "^2.7.1",
     "elastic.js": "^1.2.0",
     "elasticsearch": "^8.2.0",
+    "eventemitter2": "^0.4.14",
     "express": "^4.13.3",
     "express-init": "0.0.1",
     "express-limiter": "^1.6.0",

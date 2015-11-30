@@ -5,6 +5,11 @@ var ejs = require('elastic.js');
 var collectionHelper = require('./../helpers/collection');
 var geoHelper = require('./../helpers/geo');
 var _ = require('underscore');
+var EventEmitter2 = require('eventemitter2').EventEmitter2;
+var emitter = new EventEmitter2({});
+
+var EventEmitter2 = require('events');
+var emitter = new EventEmitter2({});
 
 (function(module) {
 
@@ -20,6 +25,9 @@ var _ = require('underscore');
     var body = ejs.Request()
       .size(per_page)
       .from(offset);
+
+      console.log('search');
+    emitter.emit('search', 'ff');
 
     var helper = collectionHelper(data.collection);
 
